@@ -1,8 +1,22 @@
-# quarkus-flyway-psql Project
+# quarkus-flyway-psql
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This is a sample Quarkus application that uses Flyway and the Reactive PostgreSQL client.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+## Prerequisites
+
+In order to start this application in your local machine or execute its unit tests, the following software (**in the correct version**) must be installed in your machine:
+
+* Java 17
+* Maven 3.8.6
+* Docker 20.10.21
+
+### Required services
+
+**Postgres 14.4**
+
+To download PostgreSQL 14.4 and start a docker container run:
+
+    docker run --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 -d postgres:14.4
 
 ## Running the application in dev mode
 
@@ -51,8 +65,3 @@ If you want to learn more about building native executables, please consult http
 
 - Flyway ([guide](https://quarkus.io/guides/flyway)): Handle your database schema migrations
 - Reactive PostgreSQL client ([guide](https://quarkus.io/guides/reactive-sql-clients)): Connect to the PostgreSQL database using the reactive pattern
-
-
-PSQL
-
-docker run --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 -d postgres:14.4

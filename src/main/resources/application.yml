@@ -1,3 +1,12 @@
 quarkus:
   datasource:
     jdbc: false
+    db-kind: postgresql
+    username: quarkus_test
+    password: quarkus_test
+    reactive:
+      url: postgresql://localhost:5432/quarkus_test
+  flyway:
+    locations: db/migration
+    default-schema: quarkus_test
+    out-of-order: false

@@ -51,3 +51,8 @@ If you want to learn more about building native executables, please consult http
 
 - Flyway ([guide](https://quarkus.io/guides/flyway)): Handle your database schema migrations
 - Reactive PostgreSQL client ([guide](https://quarkus.io/guides/reactive-sql-clients)): Connect to the PostgreSQL database using the reactive pattern
+
+
+PSQL
+
+docker run --name quarkus_test -e POSTGRES_USER=quarkus_test -e POSTGRES_PASSWORD=quarkus_test -e POSTGRES_DB=quarkus_test -p 5432:5432 -d postgres:14.4
